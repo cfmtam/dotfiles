@@ -25,6 +25,9 @@ alias battery='acpi -b'
 alias x='startx'
 alias ping='ping -c 4'
 alias mkdir='mkdir -p'
+alias nano='nano -S -$'
+alias sshuw='ssh -Y $UWUSER@linux.student.cs.uwaterloo.ca'
+alias sshcsc='ssh -Y $UWUSER@csclub.uwaterloo.ca'
 
 PS1='[\u@\h \W]\$ '
 
