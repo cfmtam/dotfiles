@@ -1,0 +1,13 @@
+#!/bin/bash
+# Toggle touchpad and launch onboard when going from laptop to tablet mode
+
+current=$( synclient | grep 'TouchpadOff')
+
+if [[ ${current: -1} -eq 1 ]]
+then
+	synclient TouchpadOff=0
+else
+	synclient TouchpadOff=1
+fi
+
+onboard &
