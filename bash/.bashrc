@@ -5,18 +5,6 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-alias ls='ls --color=auto'
-alias battery='acpi -b'
-alias x='startx'
-
-PS1='[\u@\h \W]\$ '
-#
-# ~/.bashrc
-#
-
-# If not running interactively, don't do anything
-[[ $- != *i* ]] && return
-
 alias grep='grep --color=auto'
 alias ls='ls --color=auto'
 alias la='ls -a --color=auto'
@@ -26,6 +14,7 @@ alias x='startx'
 alias ping='ping -c 4'
 alias mkdir='mkdir -p'
 alias nano='nano -S -$'
+alias dropbox='python2.7 -s ~/bin/dropbox.py'
 alias sshuw='ssh -Y $UWUSER@linux.student.cs.uwaterloo.ca'
 alias sshcsc='ssh -Y $UWUSER@csclub.uwaterloo.ca'
 
