@@ -18,8 +18,8 @@ alias dropbox='python2.7 -s ~/bin/dropbox.py'
 alias redshift='~/bin/redshift'
 alias feh='feh --scale-down --title %f'
 alias p="ps aux | grep"
-alias sshuw='ssh -Y $UWUSERID@linux.student.cs.uwaterloo.ca'
-alias sshcsc='ssh -Y $UWUSERID@csclub.uwaterloo.ca'
+alias sshuw='ssh -Y $UWUSER@linux.student.cs.uwaterloo.ca'
+alias sshcsc='ssh -Y $UWUSER@csclub.uwaterloo.ca'
 
 PS1='[\u@\h \W]\$ '
 
