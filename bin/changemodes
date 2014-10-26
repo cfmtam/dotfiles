@@ -9,5 +9,3 @@ then
 else
 	synclient TouchpadOff=1
 fi
-
-onboard &

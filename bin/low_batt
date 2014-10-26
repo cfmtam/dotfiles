@@ -1,0 +1,11 @@
+#!/bin/bash
+
+low_threshold=5
+state=$(cat /sys/class/power_supply/BAT0/status)
+
+if [ ${state} = 'Discharging' ]; then
+	batt=$(cat /sys/class/power_supply/BAT0/capacity)
+	if ((${batt} <= $low_threshold)); then
+		/usr/bin/systemctl suspend
+	fi
+fi

@@ -143,6 +143,12 @@ bindsym $mod+$meta+8 move container to workspace 8
 bindsym $mod+$meta+9 move container to workspace 9
 bindsym $mod+$meta+0 move container to workspace 10
 
+# make the currently focused window a scratchpad
+bindsym $mod+$meta+minus move scratchpad
+
+# show the first scratchpad window
+bindsym $mod+minus scratchpad show
+
 # reload the configuration file
 bindsym $mod+$meta+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)

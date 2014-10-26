@@ -1,0 +1,28 @@
+#!/bin/bash
+# Custom script for redshift to increase/decrease color temperature
+
+cmd='/usr/bin/redshift'
+sfile='/home/catherine/.redshift-settings'
+smax=25000
+smin=1000
+
+if [[ $# -eq 1 && $1 = "+" || $1 = "-"  || $1 = "0" ]]; then
+	snew=$(< $sfile)
+	if [[ $1 = "+" ]]; then
+		snew=$(($snew + 500))
+		if (( $snew > $smax ))
+			then snew=$smax
+		fi
+	elif [[ $1 = "-" ]]; then
+		snew=$(($snew - 500))
+		if (( $snew < $smin ))
+			then snew=$smin
+		fi
+	else
+		snew=6500
+	fi
+	$cmd -O $snew
+	echo $snew >$sfile
+else
+	$cmd $@
+fi
