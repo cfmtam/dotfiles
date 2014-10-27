@@ -5,9 +5,9 @@ dir='/sys/class/backlight/intel_backlight/brightness'
 
 
 if [[ $# -eq 1 ]]
-	then
-		sudo tee $dir <<< $1
-	else
-		echo "$(<$dir)"
+then
+	sudo tee $dir <<< $1
+else
+	echo "$(<$dir)"
 fi
 

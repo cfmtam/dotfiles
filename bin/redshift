@@ -6,7 +6,9 @@ sfile='/home/catherine/.redshift-settings'
 smax=25000
 smin=1000
 
-if [[ $# -eq 1 && $1 = "+" || $1 = "-"  || $1 = "0" ]]; then
+if [[ $# -eq 0 ]]; then
+	echo $(< $sfile)'/6500'
+elif [[ $# -eq 1 && $1 = "+" || $1 = "-"  || $1 = "0" ]]; then
 	snew=$(< $sfile)
 	if [[ $1 = "+" ]]; then
 		snew=$(($snew + 500))
