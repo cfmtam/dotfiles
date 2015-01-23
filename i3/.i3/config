@@ -32,8 +32,10 @@ exec touchegg
 # window focus follows mouse movements
 focus_follows_mouse no
 
-# use Mouse+$mod to drag floating windows to their wanted position
-floating_modifier $mod
+# using Mouse+$meta:
+# left click to drag floating windows to their wanted position
+# right click to resize floating windows
+floating_modifier $meta
 
 # launch terminal
 bindsym $mod+Return exec --no-startup-id urxvt
@@ -58,10 +60,8 @@ bindsym $meta+Mod1+l exec i3lock -c 2a2a2a
 # start dmenu (a program launcher)
 bindsym $mod+Tab exec dmenu_run
 
-# There also is the (new) i3-dmenu-desktop which only displays applications
-# shipping a .desktop file. It is a wrapper around dmenu, so you need that
-# installed.
-# bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
+# interactively run an arbitrary command
+bindsym $mod+$meta+Tab exec i3-input -F "exec %s"
 
 # configure external monitor
 bindsym Super_L exec extmonitor
@@ -117,7 +117,7 @@ bindsym $mod+space focus mode_toggle
 bindsym $mod+a focus parent
 
 # focus the child container
-#bindsym $mod+d focus child
+bindsym $mod+d focus child
 
 # switch to workspace
 bindsym $mod+1 workspace 1
@@ -143,6 +143,15 @@ bindsym $mod+$meta+8 move container to workspace 8
 bindsym $mod+$meta+9 move container to workspace 9
 bindsym $mod+$meta+0 move container to workspace 10
 
+# switch to previous workspace automatically
+workspace_auto_back_and_forth yes3
+
+# interactively jump to certain class, ignoring case
+bindsym $mod+grave exec i3-input -F '[title="(?i)%s"] focus'
+
+# interactively jump to certain class, ignoring case
+bindsym $mod+$meta+grave exec i3-input -F '[title="(?i)%s"] move workspace current'
+
 # make the currently focused window a scratchpad
 bindsym $mod+$meta+minus move scratchpad
 
@@ -151,8 +160,10 @@ bindsym $mod+minus scratchpad show
 
 # reload the configuration file
 bindsym $mod+$meta+c reload
+
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+$meta+r restart
+
 # exit i3 (logs you out of your X session)
 bindsym $mod+$meta+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
