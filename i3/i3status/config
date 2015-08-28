@@ -48,8 +48,9 @@ cpu_usage {
 }
 
 battery 0 {
+        last_full_capacity = true
         format = "%status %percentage %remaining"
-	low_threshold = 10
+	low_threshold = 20
 	threshold_type = "percentage"
 }
 
