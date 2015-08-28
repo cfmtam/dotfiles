@@ -1,26 +1,35 @@
+URxvt*scrollBar:                      false
 URxvt*background:                     #1a1b1c
 URxvt*foreground:                     #cccccc
+
 ! Black
 URxvt*color0:                         #505152
 URxvt*color8:                         #7c7d7e
+
 ! Red
 URxvt*color1:                         #b63f53
 URxvt*color9:                         #e8909b
+
 ! Green
 URxvt*color2:                         #51997a
 URxvt*color10:                        #9edcbb
+
 ! Yellow
 URxvt*color3:                         #b27b42
 URxvt*color11:                        #dcc58f
+
 ! Blue
 URxvt*color4:                         #5c95b3
 URxvt*color12:                        #8cb4c9
+
 ! Magenta
 URxvt*color5:                         #b85a86
 URxvt*color13:                        #d9a4c8
+
 ! Cyan
 URxvt*color6:                         #43d0d4
 URxvt*color14:                        #a1e7e9
+
 ! White
 URxvt*color7:                         #a4a6a7
 URxvt*color15:                        #e8e6e4
@@ -30,10 +39,8 @@ URxvt*boldFont:                       xft:SourceCodePro-Bold:pixelsize=14
 URxvt*italicFont:                     xft:SourceCodePro-Semibold:pixelsize=14
 URxvt*boldItalicFont:                 xft:SourceCodePro-Bold:pixelsize=14
 
-URxvt*scrollBar:                      false
-
-URxvt*perl-ext-common:                ...,clipboard
-URxvt*clipboard.autocopy:             true
-URxvt*keysym.M-c:                     perl:clipboard:copy
-URxvt*keysym.M-v:                     perl:clipboard:paste
-URxvt*keysym.M-C-v:                   perl:clipboard:paste_escaped
+URxvt*clipboard.autocopy: true
+URxvt*perl-ext-common: default,clipboard
+URxvt*keysym.M-C-c:   perl:clipboard:copy
+URxvt*keysym.M-v:   perl:clipboard:paste
+URxvt*keysym.M-C-v: perl:clipboard:paste_escaped

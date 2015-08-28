@@ -1,0 +1,16 @@
+[user]
+	name = cfmtam
+	email = cfmtam@gmail.com
+[push]
+	default = simple
+[color]
+	ui = true
+	status = auto
+	branch = auto
+[core]
+	editor = vim
+	excludesfile = /home/catherine/.gitignore
+[merge]
+	tool = diff
+[credential]
+	helper = cache --timeout=3600

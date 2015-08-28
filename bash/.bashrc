@@ -7,8 +7,7 @@
 
 alias grep='grep --color=auto'
 alias ls='ls --color=auto'
-alias la='ls -a --color=auto'
-alias ll='ls -l --color=auto'
+alias ll='ls -al --color=auto'
 alias battery='acpi -b'
 alias x='startx'
 alias ping='ping -c 4'
